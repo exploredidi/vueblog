@@ -2,12 +2,35 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/vblog_fix?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: ideaUser
     password: chenwudi
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    #password:
+  rabbitmq:
+    host: 192.168.32.140
+    username: chen_mq
+    password: 123456
+    publisher-returns: true
+    publisher-confirms: true
+  mail:
+    host: smtp.qq.com
+    protocol: smtp
+    default-encoding: utf-8
+    # password是授权码。需要定期更新
+    password: tamrhiybxjgfdhfi
+    username: 1611954377@qq.com
+    port: 587
+
+  profiles:
+    active: default
 
 # ???
 server:
+  #这里就要用这个端口，因为前端项目默认就是用的这个端口
   port: 8088
 
 # ??myabtis plus?mapper?xml???????

@@ -2,12 +2,35 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/你的数据库名?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123
+    url: jdbc:mysql://localhost:3306/数据库名字?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username:
+    password:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    #password:
+  rabbitmq:
+    host:
+    username:
+    password:
+    publisher-returns: true
+    publisher-confirms: true
+  mail:
+#    host: smtp.qq.com
+#    protocol: smtp
+#    default-encoding: utf-8
+#    # password是授权码。需要定期更新
+#    password:
+#    username:
+#    port: 587
+
+  profiles:
+    active: default
 
 # ???
 server:
+  #这里就要用这个端口，因为前端项目默认就是用的这个端口
   port: 8088
 
 # ??myabtis plus?mapper?xml???????
