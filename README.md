@@ -26,6 +26,8 @@ Vueblog是一个开源博客管理平台，采用Vue+SpringBoot开发，是本�
 2.Shiro+jwt
 3.MyBatis
 4.MySQL+Redis
+5.rabbitmq
+6.redis
 
 ## 前端技术栈
 
